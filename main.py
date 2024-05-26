@@ -35,10 +35,10 @@ class FaceAttendanceSystem:
         self.load_mode_images()
 
     def init_firebase(self):
-        cred = credentials.Certificate("serviceAccountKey.json")
+        cred = credentials.Certificate("serviceAccountKeyACCOuntTYPE.json")
         firebase_admin.initialize_app(cred, {
-            'databaseURL': 'https://faceattendancert-389ca-default-rtdb.firebaseio.com/',
-            'storageBucket': 'faceattendancert-389ca.appspot.com'
+            'databaseURL': 'DATABASE_URL',
+            'storageBucket': 'DATABASE_STORAGE'
         })
         self.bucket = storage.bucket()
 
